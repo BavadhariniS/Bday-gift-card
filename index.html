@@ -1,0 +1,185 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy Birthday Harini porukkii 💙🤍🌸</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#fff7f2; --card:#ffffffcc; --accent:#ff7ab6; --text:#333;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Poppins,system-ui,Segoe UI,Roboto,Arial; background: radial-gradient(circle at 10% 10%, #fff0f6, transparent 20%), linear-gradient(180deg,#fff7f2 0%, #fff 100%);}
+    .stage{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:40px}
+
+    .card{width:920px;max-width:95%;background:var(--card);border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,0.12);overflow:hidden;display:grid;grid-template-columns:380px 1fr}
+
+    /* left column with picture */
+    .left{padding:40px;background:linear-gradient(180deg, rgba(255,250,252,0.9), rgba(255,244,248,0.6));display:flex;flex-direction:column;align-items:center;gap:18px}
+    .photo{width:260px;height:260px;border-radius:50%;overflow:hidden;border:8px solid rgba(255,255,255,0.85);box-shadow:0 8px 20px rgba(250,0,100,0.06);background:#eee;display:flex;align-items:center;justify-content:center}
+    .photo img{width:100%;height:100%;object-fit:cover;display:block}
+    .name{font-family:'Great Vibes',cursive;font-size:36px;color:var(--accent);margin-top:6px}
+    .small{font-size:14px;color:#7a6b6b;text-align:center}
+
+    /* right column */
+    .right{padding:32px 34px 48px;position:relative}
+    .message{font-size:22px;line-height:1.45;color:var(--text);padding-right:12px}
+    .personal{margin-top:18px;background:linear-gradient(90deg,#fff,#fff8f9);padding:18px;border-radius:12px;border:1px solid rgba(200,120,160,0.08);font-size:15px}
+
+    .flowers{position:absolute;right:-20px;top:8px;pointer-events:none}
+
+    .btns{margin-top:22px;display:flex;gap:12px}
+    .btn{padding:10px 16px;border-radius:10px;border:0;font-weight:600;cursor:pointer}
+    .btn-pink{background:var(--accent);color:white}
+    .btn-soft{background:transparent;border:1px solid rgba(0,0,0,0.08)}
+
+    /* Typewriter effect */
+    .typewriter{display:inline-block;overflow:hidden;white-space:nowrap;animation:typing 3.2s steps(35,end), blink .8s steps(1,end) infinite;}
+    @keyframes typing{from{width:0}to{width:100%}}@keyframes blink{50%{border-right-color:transparent}}
+
+    /* floating flower decorations */
+    .petal{position:absolute;width:28px;height:28px;opacity:0.95;background:radial-gradient(circle at 30% 20%, #fff7f9, #ffd6ec);border-radius:50%;transform:rotate(0);filter:drop-shadow(0 2px 6px rgba(250,0,120,0.08))}
+    .petal.s1{left:20px;top:-20px;animation:float1 6s linear infinite}
+    .petal.s2{left:60px;top:10px;animation:float2 7s linear infinite}
+    .petal.s3{left:12px;bottom:30px;animation:float3 5s linear infinite}
+    @keyframes float1{0%{transform:translateY(0) rotate(0)}50%{transform:translateY(-8px) rotate(20deg)}100%{transform:translateY(0) rotate(0)}}
+    @keyframes float2{0%{transform:translateY(0) rotate(0)}50%{transform:translateY(-10px) rotate(-18deg)}100%{transform:translateY(0) rotate(0)}}
+    @keyframes float3{0%{transform:translateY(0) rotate(0)}50%{transform:translateY(-6px) rotate(16deg)}100%{transform:translateY(0) rotate(0)}}
+
+    /* responsive tweaks */
+    @media(max-width:760px){.card{grid-template-columns:1fr;}.left{padding:26px}.right{padding:22px}.photo{width:180px;height:180px}}
+
+    /* confetti canvas sits on top */
+    #confetti{position:fixed;left:0;top:0;right:0;bottom:0;pointer-events:none;z-index:999}
+  </style>
+</head>
+<body>
+  <canvas id="confetti"></canvas>
+  <div class="stage">
+    <div class="card" role="main" aria-label="Birthday card for Harini">
+
+      <div class="left">
+        <div class="photo" aria-hidden="true">
+          <!-- Replace 'photo.jpg' with your image file (same folder) -->
+          <img id="heroPhoto" src="photo.jpg" alt="Harini's photo" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'400\'><rect width=\'100%\' height=\'100%\' fill=\'%23f4e9ec\'/><text x=\'50%\' y=\'50%\' text-anchor=\'middle\' font-size=22 fill=\'%23c48ba0\' font-family=\'Poppins\'>Replace photo.jpg with Harinis photo</text></svg>'"/>
+        </div>
+        <div class="name">Porukkii🤍💙</div>
+        <div class="small">A special gift, made with love 💕</div>
+        <div style="margin-top:16px;font-size:13px;color:#9a7;opacity:0.9;text-align:center">Click the pink button on the right to start the surprise ✨</div>
+      </div>
+
+      <div class="right">
+        <div class="flowers" aria-hidden="true">
+          <div class="petal s1"></div>
+          <div class="petal s2"></div>
+          <div class="petal s3"></div>
+        </div>
+
+        <div class="message">
+          <div style="font-size:18px;color:#6c5560">To my dear💕</div>
+          <div style="font-size:30px;margin-top:4px;line-height:1"> <span style="color:var(--accent);font-family:'Great Vibes',cursive">Harini</span>, <span class="typewriter">Appiieeee buthudayy!🎀🐣</span></div>
+
+          <div class="personal" id="personalText">
+            <strong>From:</strong> Your Love😚 <br>
+            <p style="margin:8px 0 0">Appiieee buthudayy chlooo🥰✨epovum appiiee ahh iru maa🧿💖naa irruken Maybe I don't mean a lot, but I'm still here🔗btw I Lubbb Yooouuuhhhh🦢🤟🌸</p>
+            <p>I love you Labubu 🧸</p>
+          </div>
+
+          <div class="btns">
+            <button class="btn btn-pink" id="openBtn">Open your surprise</button>
+            <button class="btn btn-soft" id="downloadBtn">Download as image</button>
+          </div>
+
+          <div style="margin-top:14px;font-size:13px;color:#7a6b6b"> <code></code> <code></code> </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // Button actions
+    const openBtn = document.getElementById('openBtn');
+    const downloadBtn = document.getElementById('downloadBtn');
+    const personal = document.getElementById('personalText');
+
+    openBtn.addEventListener('click',()=>{
+      // reveal a longer personal message and fireworks (confetti)
+      personal.innerHTML = ` <strong>From:</strong> Your friend<br><p style="margin:8px 0 0">Appiieee buthudayy chloo!😘I hope this little surprise warms your heart💖You make the world brighter today and always💙Lots of hugs and cake 🍰🤗</p>`;
+      startConfetti();
+    });
+
+    // Download the card as PNG using html2canvas-like approach (simple):
+    downloadBtn.addEventListener('click',()=>{
+      // create an image snapshot of the card area
+      const card = document.querySelector('.card');
+      const rect = card.getBoundingClientRect();
+      // use SVG foreignObject technique to snapshot
+      const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='${Math.round(rect.width)}' height='${Math.round(rect.height)}'>
+        <foreignObject width='100%' height='100%'>${new XMLSerializer().serializeToString(card.cloneNode(true)).replace(/#/g,'%23')}</foreignObject>
+      </svg>`;
+      const blob = new Blob([svg],{type:'image/svg+xml;charset=utf-8'});
+      const url = URL.createObjectURL(blob);
+      const img = new Image();
+      img.onload = function(){
+        const c = document.createElement('canvas');
+        c.width = img.width; c.height = img.height;
+        const ctx = c.getContext('2d');
+        ctx.drawImage(img,0,0);
+        URL.revokeObjectURL(url);
+        const dataURL = c.toDataURL('image/png');
+        const a = document.createElement('a');
+        a.href = dataURL; a.download = 'Harini_Birthday.png';
+        a.click();
+      };
+      img.src = url;
+    });
+
+    // Simple confetti implementation
+    function startConfetti(){
+      const canvas = document.getElementById('confetti');
+      canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+      const ctx = canvas.getContext('2d');
+      const pieces = [];
+      for(let i=0;i<140;i++) pieces.push(newPiece());
+      let running=true;
+      function loop(){
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+        for(const p of pieces){
+          p.y += p.vy; p.x += p.vx; p.rotation += p.vr;
+          ctx.save(); ctx.translate(p.x,p.y); ctx.rotate(p.rotation);
+          ctx.fillStyle = p.color;
+          ctx.fillRect(-p.w/2,-p.h/2,p.w,p.h);
+          ctx.restore();
+        }
+        if(running) requestAnimationFrame(loop);
+      }
+      loop();
+      setTimeout(()=>{running=false; ctx.clearRect(0,0,canvas.width,canvas.height)},4000);
+      function newPiece(){
+        return {
+          x: Math.random()*canvas.width,
+          y: -20-Math.random()*200,
+          vx: (Math.random()-0.5)*2,
+          vy: 2+Math.random()*4,
+          rotation: Math.random()*6,
+          vr: (Math.random()-0.5)*0.2,
+          w: 6+Math.random()*10,
+          h: 6+Math.random()*8,
+          color: ['#ffb3c6','#ffd6ec','#fff2b9','#c6ffea','#ffd9b3'][Math.floor(Math.random()*5)]
+        }
+      }
+    }
+
+    // Accessibility: allow opening with Enter key
+    openBtn.addEventListener('keydown', (e)=>{ if(e.key==='Enter') openBtn.click(); });
+
+    // Optional: if you want to programmatically change personal text from outside,
+    // call window.setPersonalMessage("Your custom message here")
+    window.setPersonalMessage = function(txt){ personal.innerHTML = txt };
+  </script>
+</body>
+</html>
